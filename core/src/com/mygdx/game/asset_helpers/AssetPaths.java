@@ -16,5 +16,15 @@ public class AssetPaths {
 
     public static final String LOSE_SOUND = "sounds/lose.wav";
 
+
+    // ========== Scene2d ==========
+
+    public static final String UI_FONT_SCENE2D = "scene2d/ui/fonts/ui_font_32.fnt";
+
+    public static final String UI_SKIN_SCENE2D = "scene2d/ui/uiskin.json";
+
+
+
+
     private AssetPaths(){}
 }

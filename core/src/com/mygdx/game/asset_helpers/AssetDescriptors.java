@@ -18,5 +18,9 @@ public class AssetDescriptors {
     public static final AssetDescriptor<Sound> COIN_SOUND = new AssetDescriptor<Sound>(AssetPaths.COIN_SOUND, Sound.class);
     public static final AssetDescriptor<Sound> LOSE_SOUND = new AssetDescriptor<Sound>(AssetPaths.LOSE_SOUND, Sound.class);
 
+    // ============ scene2d ===========
+    public static final AssetDescriptor<BitmapFont> UI_FONT_SCENE2D = new AssetDescriptor<BitmapFont>(AssetPaths.UI_FONT_SCENE2D, BitmapFont.class);
+    public static final AssetDescriptor<Skin> UI_SKIN_SCENE2D = new AssetDescriptor<Skin>(AssetPaths.UI_SKIN_SCENE2D, Skin.class);
+
     private AssetDescriptors(){}
 }

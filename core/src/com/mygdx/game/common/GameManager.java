@@ -60,9 +60,8 @@ public class GameManager {
         return displayHighScore;
     }
 
-    // ===== updates =====
-    public void updateHighScore(){
-        if(score < highScore){
+    public void updateHighScore() {
+        if (score < highScore) {
             return;
         }
 
@@ -85,6 +84,10 @@ public class GameManager {
     // === increment score ===
     public void incrementScore(float amount) {
         score += amount;
+
+        if (score > highScore) {
+            highScore = score;
+        }
     }
 
     //=== reset ===
@@ -93,7 +96,6 @@ public class GameManager {
         score = 0;
         displayScore = 0;
     }
-
 
 
 }

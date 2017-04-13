@@ -1,4 +1,4 @@
-package com.mygdx.game.entities;
+package com.mygdx.game.common;
 
 /**
  * Created by Jay Nguyen on 4/4/2017.
