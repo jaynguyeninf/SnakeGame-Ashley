@@ -69,7 +69,6 @@ public class CollisionSystem extends IntervalSystem {
                     GameManager.INSTANCE.setGameOver();
                 }
 
-
             }
         }
 

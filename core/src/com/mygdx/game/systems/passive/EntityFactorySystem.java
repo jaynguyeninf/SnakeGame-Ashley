@@ -59,7 +59,7 @@ public class EntityFactorySystem extends EntitySystem {
 
     @Override
     public void addedToEngine(Engine engine) {
-        this.engine = (PooledEngine)engine;
+        this.engine = (PooledEngine) engine;
     }
 
     public void createSnake() {
@@ -175,7 +175,6 @@ public class EntityFactorySystem extends EntitySystem {
         entity.add(coinComponent);
         entity.add(textureComponent);
         entity.add(zOrderComponent);
-
 
         engine.addEntity(entity);
     }
