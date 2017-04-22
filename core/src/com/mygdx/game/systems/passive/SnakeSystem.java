@@ -21,6 +21,7 @@ public class SnakeSystem extends EntitySystem implements EntityListener {
             SnakeComponent.class
     ).get();
 
+
     @Override
     public boolean checkProcessing() {
         return false; //return false so engine won't call its update() method
@@ -44,7 +45,6 @@ public class SnakeSystem extends EntitySystem implements EntityListener {
         log.debug("SnakeSystem removedFromEngine");
     }
 
-
     // == entities in engine
     @Override
     public void entityAdded(Entity entity) {
@@ -62,6 +62,5 @@ public class SnakeSystem extends EntitySystem implements EntityListener {
         for(Entity bodyPart : snakeComponent.bodyParts){
             engine.removeEntity(bodyPart);
         }
-
     }
 }

@@ -51,7 +51,7 @@ public class CollisionSystem extends IntervalSystem {
         ImmutableArray<Entity> snakes = engine.getEntitiesFor(SNAKE_FAMILY);
         ImmutableArray<Entity> coins = engine.getEntitiesFor(COIN_FAMILY);
 
-        //check collision between snake head and body parts
+        // ==check collision between snake head and body parts==
         for (Entity snakeHeadEntity : snakes) {
             SnakeComponent snakeComponent = Mappers.SNAKE_COMPONENT.get(snakeHeadEntity);
 
@@ -72,7 +72,7 @@ public class CollisionSystem extends IntervalSystem {
             }
         }
 
-        //check collision between snake and coin
+        // ==check collision between snake and coin==
         for (Entity snakeEntity : snakes) {
             for (Entity coinEntity : coins) {
 

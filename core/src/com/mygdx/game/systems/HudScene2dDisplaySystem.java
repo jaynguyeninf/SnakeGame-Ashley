@@ -30,11 +30,11 @@ public class HudScene2dDisplaySystem extends EntitySystem {
     private Label scoreLabel, highScoreLabel;
 
 
-    public HudScene2dDisplaySystem(SnakeGame game, Viewport hudViewport, SpriteBatch batch, AssetManager assetManager) {
+    public HudScene2dDisplaySystem(SnakeGame game, Viewport hudViewport) {
         this.game = game;
         this.hudViewport = hudViewport;
-        this.batch = batch;
-        this.assetManager = assetManager;
+        batch = game.getBatch();
+        assetManager = game.getAssetManager();
 
         stage = new Stage(hudViewport, game.getBatch());
 
@@ -54,7 +54,6 @@ public class HudScene2dDisplaySystem extends EntitySystem {
         //update text
         highScoreLabel.setText("High Score: " + (int)GameManager.INSTANCE.getDisplayHighScore());
         scoreLabel.setText("Score: " + (int)GameManager.INSTANCE.getDisplayScore());
-
 
     }
 

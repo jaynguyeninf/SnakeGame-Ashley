@@ -57,8 +57,6 @@ public class GameScreen extends ScreenAdapter {
         this.game = game;
         assetManager = game.getAssetManager();
         batch = game.getBatch();
-
-
     }
 
     @Override
@@ -88,16 +86,14 @@ public class GameScreen extends ScreenAdapter {
         engine.addSystem(new SpawnCoinSystem());
         engine.addSystem(new CollisionSystem());
         engine.addSystem(new TextureRenderSystem(batch, viewport));
-        engine.addSystem(new HudScene2dDisplaySystem(game, hudViewport, batch, assetManager));
+        engine.addSystem(new HudScene2dDisplaySystem(game, hudViewport));
 
         engine.addSystem(new DebugInputSystem());
-
         engine.addSystem(new StartUpSystem());
 
         /* Add entities.
             Doesn't matter the order because Z Component will take care of it
          */
-
 
         GameManager.INSTANCE.reset(); //reset game otherwise will stay in MenuScreen
     }
@@ -113,6 +109,7 @@ public class GameScreen extends ScreenAdapter {
         if (GameManager.INSTANCE.isGameOver()) {
             game.setScreen(new MenuScreen(game));
         }
+
     }
 
     @Override
